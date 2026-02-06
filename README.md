@@ -35,13 +35,6 @@ Simply update the values in this file, and the site will automatically reflect c
 - **Colors**: Defined in `src/app/globals.css` (CSS variables for background, primary, secondary, accent).
 - **Icons**: Using [Lucide React](https://lucide.dev/).
 
-## 📦 Deployment
-
-The easiest way to deploy is using [Vercel](https://vercel.com).
-
-1. Push this repository to GitHub.
-2. Import the project in Vercel.
-3. Deploy!
 
 ## 📄 License
 
