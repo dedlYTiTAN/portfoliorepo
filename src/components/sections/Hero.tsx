@@ -72,7 +72,7 @@ export default function Hero() {
                     <Button
                         size="lg"
                         variant="outline"
-                        onClick={() => window.open("/Keerthirajan_Murugesan_CV.pdf", "_blank")}
+                        onClick={() => window.open("/portfoliorepo/Keerthirajan_Murugesan_CV.pdf", "_blank")}
                     >
                         Download CV <Download className="ml-2 w-4 h-4" />
                     </Button>
