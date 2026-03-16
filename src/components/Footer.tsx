@@ -13,7 +13,18 @@ export default function Footer() {
                     Built with Next.js, TypeScript, and Tailwind CSS.
                 </p>
             </div>
-            <div style="letter-spacing: 1px;">DESIGNED BY <a href="https://astralprism.co.uk" target="_blank" style="color: var(--acc); font-weight: bold; border-bottom: 1px solid var(--acc); padding-bottom: 1px; text-decoration: none;">ASTRALPRISM</a></div>
+            <div className="mt-4 opacity-50" style={{ letterSpacing: "1px" }}>
+                DESIGNED BY{" "}
+                <a 
+                    href="https://astralprism.co.uk" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors font-bold border-b border-primary/50 pb-0.5"
+                    style={{ color: "var(--accent)" }}
+                >
+                    ASTRALPRISM
+                </a>
+            </div>
         </footer>
     );
 }

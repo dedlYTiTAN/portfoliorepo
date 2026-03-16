@@ -129,7 +129,7 @@ export const portfolioData = {
       title: "Full-Stack Web Login System",
       category: "Web Development",
       description:
-        "Diseigned a secure authentication system using Python, PHP, MySQL, HTML, and CSS with session and database management.",
+        "Designed a secure authentication system using Python, PHP, MySQL, HTML, and CSS with session and database management.",
       tech: ["Python", "PHP", "MySQL", "HTML/CSS"],
       link: "https://github.com/dedlYTiTAN/Simple-web-login",
     },
