@@ -54,6 +54,15 @@ export default function Hero() {
                     className="text-lg md:text-xl text-zinc-400 max-w-2xl mb-10 leading-relaxed"
                 >
                     {personal.shortSummary}
+                    <br />
+                    <a 
+                        href={personal.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline text-base mt-2 inline-block font-medium"
+                    >
+                        Founder @ AstralPrism
+                    </a>
                 </motion.p>
 
                 <motion.div

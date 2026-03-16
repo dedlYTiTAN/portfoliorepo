@@ -7,11 +7,13 @@ import { Card } from "@/components/ui/Card";
 
 const skillCategories = [
     { title: "Programming", skills: portfolioData.skills.programming },
-    { title: "ML / AI", skills: portfolioData.skills.mlAi },
-    { title: "Libraries & Tools", skills: portfolioData.skills.librariesTools },
-    { title: "Data Engineering", skills: portfolioData.skills.dataEngineering },
+    { title: "ML / AI & NLP", skills: portfolioData.skills.mlAi },
+    { title: "Data & Analysis", skills: portfolioData.skills.librariesTools },
+    { title: "Web & Frontend", skills: portfolioData.skills.webFrontend },
+    { title: "Web3 & DeFi", skills: portfolioData.skills.web3DeFi },
+    { title: "Trading & Finance", skills: portfolioData.skills.tradingFinance },
+    { title: "Backend & Databases", skills: portfolioData.skills.backendDatabases },
     { title: "Cloud & DevOps", skills: portfolioData.skills.cloudDevOps },
-    { title: "Data Visualization", skills: portfolioData.skills.dataViz },
     { title: "Personal Skills", skills: portfolioData.skills.personal },
 ];
 
