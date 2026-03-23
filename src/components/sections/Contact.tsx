@@ -10,7 +10,7 @@ import { Mail, Phone, Github, Linkedin, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Simple Input Component
-const Input = ({ className, ...props }: HTMLAttributes<HTMLInputElement> & { type?: string, placeholder?: string, required?: boolean }) => (
+const Input = ({ className, ...props }: React.InputHTMLAttributes<HTMLInputElement>) => (
     <input
         className={cn(
             "w-full bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all",
@@ -21,7 +21,7 @@ const Input = ({ className, ...props }: HTMLAttributes<HTMLInputElement> & { typ
 );
 
 // Simple Textarea Component
-const Textarea = ({ className, ...props }: HTMLAttributes<HTMLTextAreaElement> & { placeholder?: string, rows?: number, required?: boolean }) => (
+const Textarea = ({ className, ...props }: React.TextareaHTMLAttributes<HTMLTextAreaElement>) => (
     <textarea
         className={cn(
             "w-full bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none",
@@ -35,18 +35,34 @@ export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate network request
-        await new Promise((resolve) => setTimeout(resolve, 1500));
+        const formData = new FormData(e.currentTarget);
 
-        console.log("Form submitted!");
-        setIsSubmitting(false);
-        setSubmitted(true);
+        try {
+            const response = await fetch("https://formspree.io/f/mgonjppg", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json",
+                },
+            });
+
+            if (response.ok) {
+                setSubmitted(true);
+            } else {
+                console.error("Form submission failed");
+                alert("Failed to send message. Please try again.");
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            alert("An error occurred. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
-
     const contactMethods = [
         {
             icon: <Mail className="w-6 h-6" />,
@@ -144,21 +160,21 @@ export default function Contact() {
                                     <label htmlFor="name" className="block text-sm font-medium text-zinc-400 mb-1">
                                         Your Name
                                     </label>
-                                    <Input id="name" type="text" placeholder="John Doe" required />
+                                    <Input id="name" name="name" type="text" placeholder="John Doe" required />
                                 </div>
 
                                 <div>
                                     <label htmlFor="email" className="block text-sm font-medium text-zinc-400 mb-1">
                                         Your Email
                                     </label>
-                                    <Input id="email" type="email" placeholder="john@example.com" required />
+                                    <Input id="email" name="email" type="email" placeholder="john@example.com" required />
                                 </div>
 
                                 <div>
                                     <label htmlFor="message" className="block text-sm font-medium text-zinc-400 mb-1">
                                         Message
                                     </label>
-                                    <Textarea id="message" rows={4} placeholder="Hello, I'd like to discuss..." required />
+                                    <Textarea id="message" name="message" rows={4} placeholder="Hello, I'd like to discuss..." required />
                                 </div>
 
                                 <Button
