@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="mt-4 opacity-50" style={{ letterSpacing: "1px" }}>
                 DESIGNED BY{" "}
                 <a 
-                    href="https://astralprism.co.uk" 
+                    href="https://www.astralprism.co.uk" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors font-bold border-b border-primary/50 pb-0.5"
