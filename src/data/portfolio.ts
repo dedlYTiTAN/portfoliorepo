@@ -155,16 +155,32 @@ export const portfolioData = {
       role: "Founder & Lead Engineer",
       company: "AstralPrism",
       location: "Hull, UK",
-      period: "2026 – Present",
+      period: "Feb 2026 – Present",
       description:
         "Founded and operate a software studio building production-grade web platforms, DeFi tools, and enterprise prototypes for real clients. Manage the full delivery lifecycle.",
       link: "https://www.astralprism.co.uk",
     },
     {
+      role: "FC Associate",
+      company: "Amazon FC - DSA2",
+      location: "UK",
+      period: "Apr 2026 – Present",
+      description:
+        "Prioritizing HS and manual handling to foster a safe workplace culture. Learning end-to-end expertise in Inbound (stow) and Outbound (pick/dispatch) FMCG dynamics."
+    },
+    {
+      role: "Team Leader - Robots Line",
+      company: "2 sister food group",
+      location: "Scunthorpe, UK",
+      period: "Jan 2026 – Mar 2026",
+      description:
+        "Led diverse teams, managing labor allocation, daily calibrations, and automated system diagnostics to ensure full line coverage, safety, and legal compliance in a high-speed robotic production environment."
+    },
+    {
       role: "Sales Manager",
       company: "Morrisons Daily",
       location: "Hull, UK",
-      period: "Jan 2025 – Dec 2025",
+      period: "Jan 2025 – Sep 2025",
     },
     {
       role: "Shop Assistant",
@@ -187,6 +203,11 @@ export const portfolioData = {
     },
   ],
   leadership: [
+    {
+      role: "Team Leader - Robots Line",
+      organization: "2 Sisters Food Group",
+      description: "Led diverse teams, managing labor allocation, daily calibrations, and automated system diagnostics.",
+    },
     {
       role: "President",
       organization: "E-CAP Club (KSRIET)",
